@@ -75,6 +75,17 @@ class Routes extends RouteListCommand
     }
 
     /**
+     * Execute the console command.
+     *
+     * @return void
+     */
+    public function handle()
+    {
+        $this->routes = $this->router->getRoutes();
+        parent::handle();
+    }
+
+    /**
      * Compile the routes into a displayable format.
      *
      * @return array
